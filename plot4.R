@@ -13,7 +13,7 @@ par(mfrow=c(2,2))
 #2
 plot(HPC_DT2D[Global_active_power!='?',strptime(HPC_DT2D$DateTimeString,format="%d/%m/%Y %H:%M:%S")],
      HPC_DT2D[Global_active_power!='?',as.numeric(Global_active_power)], type="n",
-     xlab='',ylab='Global Active Power (kilowatts)',main = '')
+     xlab='',ylab='Global Active Power',main = '')
 lines(HPC_DT2D[Global_active_power!='?',strptime(HPC_DT2D$DateTimeString,format="%d/%m/%Y %H:%M:%S")],
       HPC_DT2D[Global_active_power!='?',as.numeric(Global_active_power)])
 #New
@@ -37,7 +37,7 @@ legend('topright', c('Sub_metering_1','Sub_metering_2','Sub_metering_3') ,
 #4
 plot(HPC_DT2D[Global_reactive_power!='?',strptime(HPC_DT2D$DateTimeString,format="%d/%m/%Y %H:%M:%S")],
      HPC_DT2D[Global_reactive_power!='?',as.numeric(Global_reactive_power)], type="n",
-     xlab='datetime',ylab='Global Reactive Power',main = '')
+     xlab='datetime',ylab='Global_reactive_power',main = '')
 lines(HPC_DT2D[Global_reactive_power!='?',strptime(HPC_DT2D$DateTimeString,format="%d/%m/%Y %H:%M:%S")],
       HPC_DT2D[Global_reactive_power!='?',as.numeric(Global_reactive_power)])
 dev.off()
